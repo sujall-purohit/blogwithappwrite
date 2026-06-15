@@ -71,26 +71,43 @@ export default function PostForm({ post }) {
     }, [watch, slugTransform, setValue]);
 
     return (
-        <form onSubmit={handleSubmit(submit)} className="flex flex-wrap">
-            <div className="w-2/3 px-2">
+        <form
+            onSubmit={handleSubmit(submit)}
+            className="flex flex-col lg:flex-row"
+        >
+            {/* Left Section */}
+            <div className="w-full lg:w-2/3 px-2">
                 <Input
                     label="Title :"
                     placeholder="Title"
                     className="mb-4"
                     {...register("title", { required: true })}
                 />
+
                 <Input
                     label="Slug :"
                     placeholder="Slug"
                     className="mb-4"
                     {...register("slug", { required: true })}
                     onInput={(e) => {
-                        setValue("slug", slugTransform(e.currentTarget.value), { shouldValidate: true });
+                        setValue(
+                            "slug",
+                            slugTransform(e.currentTarget.value),
+                            { shouldValidate: true }
+                        );
                     }}
                 />
-                <RTE label="Content :" name="content" control={control} defaultValue={getValues("content")} />
+
+                <RTE
+                    label="Content :"
+                    name="content"
+                    control={control}
+                    defaultValue={getValues("content")}
+                />
             </div>
-            <div className="w-1/3 px-2">
+
+            {/* Right Section */}
+            <div className="w-full lg:w-1/3 px-2 mt-6 lg:mt-0">
                 <Input
                     label="Featured Image :"
                     type="file"
@@ -98,22 +115,31 @@ export default function PostForm({ post }) {
                     accept="image/png, image/jpg, image/jpeg, image/gif"
                     {...register("image", { required: !post })}
                 />
+
                 {post && (
                     <div className="w-full mb-4">
                         <img
-                            src={appwriteService.getImagePreviewURL(post.featureImage)}
+                            src={appwriteService.getImagePreviewURL(
+                                post.featureImage
+                            )}
                             alt={post.title}
-                            className="rounded-lg"
+                            className="w-full h-auto rounded-lg"
                         />
                     </div>
                 )}
+
                 <Select
                     options={["active", "inactive"]}
                     label="Status"
                     className="mb-4"
                     {...register("status", { required: true })}
                 />
-                <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full">
+
+                <Button
+                    type="submit"
+                    bgColor={post ? "bg-green-500" : undefined}
+                    className="w-full"
+                >
                     {post ? "Update" : "Submit"}
                 </Button>
             </div>
