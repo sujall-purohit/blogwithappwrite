@@ -4,7 +4,7 @@ import Logo from './Logo'
 
 function Footer() {
   return (
-    <section className="bg-white border-t border-slate-200 py-12">
+    <section className="bg-white border-t border-slate-200 py-8 md:py-12">
       <div className="relative z-10 mx-auto max-w-7xl px-4">
         <div className="-m-6 flex flex-wrap">
           <div className="w-full p-6 md:w-1/2 lg:w-5/12">
@@ -14,20 +14,20 @@ function Footer() {
               </div>
               <div>
                 <p className="text-sm text-gray-600">
-                  &copy; Copyright 2023. All Rights Reserved by DevUI.
+                 &copy; {new Date().getFullYear()} CodeCanvas. All rights reserved.
                 </p>
               </div>
             </div>
           </div>
           <div className="w-full p-6 md:w-1/2 lg:w-2/12">
             <div className="h-full">
-              <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
+              <h3 className="tracking-px mb-5 md:mb-5 md:mb-5 md:mb-9  text-xs font-semibold uppercase text-gray-500">
                 Company
               </h3>
               <ul>
                 <li className="mb-4">
                   <Link
-                    className=" text-base font-medium text-slate-600 hover:text-indigo-600 transition-colors hover:text-gray-700"
+                    className=" text-base font-medium text-slate-600 text-slate-600 hover:text-indigo-600 transition-colors"
                     to="/"
                   >
                     Features
@@ -35,7 +35,7 @@ function Footer() {
                 </li>
                 <li className="mb-4">
                   <Link
-                    className=" text-base font-medium text-slate-600 hover:text-indigo-600 transition-colors hover:text-gray-700"
+                    className=" text-base font-medium text-slate-600 text-slate-600 hover:text-indigo-600 transition-colors"
                     to="/"
                   >
                     Pricing
@@ -43,7 +43,7 @@ function Footer() {
                 </li>
                 <li className="mb-4">
                   <Link
-                    className=" text-base font-medium text-slate-600 hover:text-indigo-600 transition-colors hover:text-gray-700"
+                    className=" text-base font-medium text-slate-600 text-slate-600 hover:text-indigo-600 transition-colors"
                     to="/"
                   >
                     Affiliate Program
@@ -51,7 +51,7 @@ function Footer() {
                 </li>
                 <li>
                   <Link
-                    className=" text-base font-medium text-slate-600 hover:text-indigo-600 transition-colors hover:text-gray-700"
+                    className=" text-base font-medium text-slate-600 text-slate-600 hover:text-indigo-600 transition-colors"
                     to="/"
                   >
                     Press Kit
@@ -62,13 +62,13 @@ function Footer() {
           </div>
           <div className="w-full p-6 md:w-1/2 lg:w-2/12">
             <div className="h-full">
-              <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
+              <h3 className="tracking-px mb-5 md:mb-5 md:mb-5 md:mb-9  text-xs font-semibold uppercase text-gray-500">
                 Support
               </h3>
               <ul>
                 <li className="mb-4">
                   <Link
-                    className=" text-base font-medium text-slate-600 hover:text-indigo-600 transition-colors hover:text-gray-700"
+                    className=" text-base font-medium text-slate-600 text-slate-600 hover:text-indigo-600 transition-colors"
                     to="/"
                   >
                     Account
@@ -76,7 +76,7 @@ function Footer() {
                 </li>
                 <li className="mb-4">
                   <Link
-                    className=" text-base font-medium text-slate-600 hover:text-indigo-600 transition-colors hover:text-gray-700"
+                    className=" text-base font-medium text-slate-600 text-slate-600 hover:text-indigo-600 transition-colors"
                     to="/"
                   >
                     Help
@@ -84,7 +84,7 @@ function Footer() {
                 </li>
                 <li className="mb-4">
                   <Link
-                    className=" text-base font-medium text-slate-600 hover:text-indigo-600 transition-colors hover:text-gray-700"
+                    className=" text-base font-medium text-slate-600 text-slate-600 hover:text-indigo-600 transition-colors"
                     to="/"
                   >
                     Contact Us
@@ -92,7 +92,7 @@ function Footer() {
                 </li>
                 <li>
                   <Link
-                    className=" text-base font-medium text-slate-600 hover:text-indigo-600 transition-colors hover:text-gray-700"
+                    className=" text-base font-medium text-slate-600 text-slate-600 hover:text-indigo-600 transition-colors"
                     to="/"
                   >
                     Customer Support
@@ -103,13 +103,13 @@ function Footer() {
           </div>
           <div className="w-full p-6 md:w-1/2 lg:w-3/12">
             <div className="h-full">
-              <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
+              <h3 className="tracking-px mb-5 md:mb-5 md:mb-9  text-xs font-semibold uppercase text-gray-500">
                 Legals
               </h3>
               <ul>
                 <li className="mb-4">
                   <Link
-                    className=" text-base font-medium text-slate-600 hover:text-indigo-600 transition-colors hover:text-gray-700"
+                    className=" text-base font-medium text-slate-600 text-slate-600 hover:text-indigo-600 transition-colors"
                     to="/"
                   >
                     Terms &amp; Conditions
@@ -117,7 +117,7 @@ function Footer() {
                 </li>
                 <li className="mb-4">
                   <Link
-                    className=" text-base font-medium text-slate-600 hover:text-indigo-600 transition-colors hover:text-gray-700"
+                    className=" text-base font-medium text-slate-600 text-slate-600 hover:text-indigo-600 transition-colors"
                     to="/"
                   >
                     Privacy Policy
@@ -125,7 +125,7 @@ function Footer() {
                 </li>
                 <li>
                   <Link
-                    className=" text-base font-medium text-slate-600 hover:text-indigo-600 transition-colors hover:text-gray-700"
+                    className=" text-base font-medium text-slate-600 text-slate-600 hover:text-indigo-600 transition-colors"
                     to="/"
                   >
                     Licensing

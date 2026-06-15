@@ -3,13 +3,13 @@ import { Container, PostForm } from "../components";
 
 function AddPost() {
   return (
-    <div className="min-h-screen bg-slate-50 py-12 px-4">
+    <div className="min-h-screen bg-slate-50 py-6 md:py-12 px-4">
       <Container>
-        <div className="max-w-8xl mx-auto">
+        <div className=" mx-auto">
 
           {/* Heading */}
           <div className="mb-8">
-            <h1 className="text-4xl font-bold text-slate-900">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900">
               Create New Post ✍️
             </h1>
 
@@ -26,7 +26,7 @@ function AddPost() {
                         shadow-xl
                         border
                         border-slate-200
-                        p-8
+                        p-4 md:p-6 lg:p-8
                         "
           >
             <PostForm />

@@ -52,7 +52,7 @@ export default function Post() {
     }
 
     return (
-        <div className="min-h-screen bg-slate-50 py-10">
+        <div className="min-h-screen bg-slate-50 py-6 md:py-10">
             <Container>
                 <div className="max-w-5xl mx-auto">
 
@@ -63,7 +63,7 @@ export default function Post() {
                                 post.featureImage
                             )}
                             alt={post.title}
-                            className="w-full h-[400px] object-cover"
+                            className="w-full aspect-video object-cover"
                         />
                     </div>
 
@@ -73,11 +73,11 @@ export default function Post() {
                             Blog Article
                         </div>
 
-                        <h1 className="text-5xl font-extrabold text-slate-900 leading-tight">
+                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">
                             {post.title}
                         </h1>
 
-                        <div className="mt-4 flex items-center gap-4 text-slate-500">
+                        <div className="mt-4 flex flex-wrap items-center gap-2 md:gap-4 text-slate-500">
                             <span>Published Article</span>
                             <span>•</span>
                             <span> {new Date(post.$createdAt).toLocaleDateString("en-IN", {
@@ -88,7 +88,7 @@ export default function Post() {
                         </div>
 
                         {isAuthor && (
-                            <div className="mt-6 flex gap-3">
+                            <div className="mt-6 flex flex-col sm:flex-row gap-3">
                                 <Link to={`/edit-post/${post.$id}`}>
                                     <Button
                                         className="bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2 rounded-xl"
@@ -115,16 +115,12 @@ export default function Post() {
                         shadow-sm
                         border
                         border-slate-200
-                        p-8
-                        md:p-12
+                       p-4 md:p-8 lg:p-12
                         "
                     >
                         <div
                             className="
-                            prose
-                            prose-lg
-                            max-w-none
-                            prose-slate
+                          prose max-w-none prose-slate md:prose-lg
                             "
                         >
                             {parse(post.content)}

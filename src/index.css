@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+.prose img {
+  max-width: 100%;
+  height: auto;
+}
+
+.prose table {
+  display: block;
+  overflow-x: auto;
+}
+
+.prose pre {
+  overflow-x: auto;
+}

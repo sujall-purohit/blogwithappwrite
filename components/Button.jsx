@@ -9,7 +9,8 @@ export default function Button({
     ...props
 }) {
     return (
-        <button className={`px-4 py-2 rounded-lg ${bgColor} ${textColor} ${className}`} {...props}>
+        <button className={`px-5 py-3 rounded-lg whitespace-nowrap transition-all
+  duration-200 ${bgColor} ${textColor} ${className}`} {...props}>
             {children}
         </button>
     );

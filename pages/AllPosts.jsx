@@ -12,11 +12,11 @@ function AllPosts() {
         })
     }, [])
     return (
-        <div className="min-h-screen bg-slate-50 py-12">
+        <div className="min-h-screen bg-slate-50 py-6 md:py-12">
             <Container>
 
                 <div className="mb-12">
-                    <h1 className="text-4xl font-bold text-slate-900">
+                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900">
                         All Articles
                     </h1>
 
@@ -25,7 +25,7 @@ function AllPosts() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
                     {posts.map((post) => (
                         <PostCard key={post.$id} {...post} />
                     ))}

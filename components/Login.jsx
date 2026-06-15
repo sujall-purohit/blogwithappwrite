@@ -34,9 +34,9 @@ function Login() {
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-white to-indigo-100 px-4">
-            <div className="w-full max-w-lg bg-white rounded-3xl p-10 shadow-2xl border border-slate-200 transition-all duration-300 hover:shadow-3xl">
+            <div className="w-full max-w-lg bg-white rounded-3xl p-6 md:p-10 shadow-2xl border border-slate-200 transition-all duration-300 hover:shadow-3xl">
                 <div className="text-center">
-                    <h2 className="text-3xl font-bold text-slate-900">
+                    <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
                         Welcome Back
                     </h2>
                 </div>
@@ -47,7 +47,7 @@ function Login() {
                 )}
 
                 {/* Form */}
-                <form onSubmit={handleSubmit(login)} className="mt-10">
+                <form onSubmit={handleSubmit(login)} className="mt-6 md:mt-10">
                     <div className="space-y-5">
 
                         <Input

@@ -15,7 +15,7 @@ function PostCard({ $id, title, featureImage, $createdAt }) {
         shadow-sm
         transition-all
         duration-300
-        hover:-translate-y-2
+        hover:-translate-y-1 md:hover:-translate-y-2
         hover:shadow-xl
       "
             >
@@ -25,7 +25,7 @@ function PostCard({ $id, title, featureImage, $createdAt }) {
                         alt={title}
                         className="
               w-full
-              h-56
+              aspect-video
               object-cover
               transition-transform
               duration-500
@@ -53,7 +53,7 @@ function PostCard({ $id, title, featureImage, $createdAt }) {
                     <h2
                         className="
             mt-3
-            text-xl
+            text-lg md:text-xl
             font-bold
             text-slate-900
             line-clamp-2
@@ -62,7 +62,7 @@ function PostCard({ $id, title, featureImage, $createdAt }) {
                         {title}
                     </h2>
 
-                    <div className="mt-4 flex items-center justify-between text-sm text-slate-500">
+                    <div className="mt-4 text-sm text-slate-500">
                         <span> {new Date($createdAt).toLocaleDateString("en-IN", {
                             day: "numeric",
                             month: "long",
